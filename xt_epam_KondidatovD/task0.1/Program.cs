@@ -12,7 +12,7 @@ namespace task0._1
         }
 
         static void Main(string[] args)
-        {
+        { 
             Console.WriteLine("Enter N");
             //Считываем N во время вызова функции
             Function(Convert.ToInt32(Console.ReadLine()));
