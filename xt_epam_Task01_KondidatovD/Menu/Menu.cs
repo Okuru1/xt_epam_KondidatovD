@@ -42,8 +42,29 @@ namespace Menu
                     case 2:
                         task1_2.Program.Main();
                         break;
-
                     case 3:
+                        task1_3.Program.Main();
+                        break;
+                    case 4:
+                        task1_4.Program.Main();
+                        break;
+                    case 5:
+                        task1_5.Program.Main();
+                        break;
+                    case 6:
+                        task1_6.Program.Main();
+                        break;
+                    case 7:
+                        task1_7.Program.Main();
+                        break;
+                    case 8:
+                        task1_8.Program.Main();
+                        break;
+                    case 9:
+                        task1_9.Program.Main();
+                        break;
+                    case 10:
+                        task1_10.Program.Main();
                         break;
                 };                
             } while (c != 0);

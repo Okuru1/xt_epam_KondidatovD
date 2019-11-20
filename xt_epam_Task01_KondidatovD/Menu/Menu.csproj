@@ -51,13 +51,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\task1.1\task1.1Rectangle.csproj">
+      <Project>{83fca706-b8c4-4598-a9f7-e227a15800f0}</Project>
+      <Name>task1.1Rectangle</Name>
+    </ProjectReference>
     <ProjectReference Include="..\task1.2\task1.2Triangle.csproj">
       <Project>{2dcb27b3-611e-4365-a96f-febb4ae6f2c7}</Project>
       <Name>task1.2Triangle</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\xt_epam_tasks_01_CSharp_Basics\task1.1Rectangle.csproj">
-      <Project>{83fca706-b8c4-4598-a9f7-e227a15800f0}</Project>
-      <Name>task1.1Rectangle</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
