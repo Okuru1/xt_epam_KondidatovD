@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{808DF9C8-296F-48BF-829A-56B002C10599}"
-	ProjectSection(SolutionItems) = preProject
-		InputFromConsole.cs = InputFromConsole.cs
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", "{141DE7E9-5E12-4A60-8F66-A1F9A4998807}"
 EndProject

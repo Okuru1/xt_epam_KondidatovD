@@ -59,6 +59,10 @@
       <Project>{2dcb27b3-611e-4365-a96f-febb4ae6f2c7}</Project>
       <Name>task1.2Triangle</Name>
     </ProjectReference>
+    <ProjectReference Include="..\task1.3\task1.3AnotherTriangle.csproj">
+      <Project>{8b73c5aa-8931-4ac8-8e82-78f60dba15c0}</Project>
+      <Name>task1.3AnotherTriangle</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

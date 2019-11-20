@@ -3,7 +3,7 @@
 namespace OtherClasses
 {
     //Класс, в котором содержатся методы ввода значений через консоль с проверкой
-    class InputFromConsole
+    public class InputFromConsole
     {   
         /// <summary>
         /// Метод ввода данных со встроенными проверками на ввод корректных значений
@@ -19,7 +19,7 @@ namespace OtherClasses
             if (includeNull)
                 while (!check)
                 {
-                    if (Int32.TryParse(Console.ReadLine(), out input))
+                    if (int.TryParse(Console.ReadLine(), out input))
                         if (input >= 0)
                             check = true;
                         else
@@ -33,7 +33,7 @@ namespace OtherClasses
             else
                 while (!check)
                 {
-                    if (Int32.TryParse(Console.ReadLine(), out input))
+                    if (int.TryParse(Console.ReadLine(), out input))
                         if (input > 0)
                             check = true;
                         else

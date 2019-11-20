@@ -10,6 +10,8 @@ namespace task1_2
     {
         public static void Main()
         {
+           
+            
 
 
         }
