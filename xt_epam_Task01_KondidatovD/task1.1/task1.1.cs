@@ -17,8 +17,9 @@ namespace task1_1
             double x = InputFromConsole.IsDouble();
             Console.WriteLine("\n\rEnter Y");
             double y = InputFromConsole.IsDouble();
-            RectangleSquare(x, y);          
-            Console.ReadKey();
+            RectangleSquare(x, y);
+            return;
+            
         }
         private static double RectangleSquare(double a, double b)
         {
