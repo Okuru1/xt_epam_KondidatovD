@@ -82,6 +82,14 @@
       <Project>{5ab67745-cafa-45aa-bd60-9ba22aba0d58}</Project>
       <Name>task1.7ArrayProcessing</Name>
     </ProjectReference>
+    <ProjectReference Include="..\task1.8NoPositive\task1.8NoPositive.csproj">
+      <Project>{88b964e4-5252-4f03-ba5f-b01d59e790bf}</Project>
+      <Name>task1.8NoPositive</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\task1.9NonNegativeSum\task1.9NonNegativeSum.csproj">
+      <Project>{a4d77848-e562-4468-b466-f99676aafc70}</Project>
+      <Name>task1.9NonNegativeSum</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

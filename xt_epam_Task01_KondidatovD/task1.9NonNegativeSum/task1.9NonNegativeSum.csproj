@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{88B964E4-5252-4F03-BA5F-B01D59E790BF}</ProjectGuid>
+    <ProjectGuid>{A4D77848-E562-4468-B466-F99676AAFC70}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>task1._8NoPositive</RootNamespace>
-    <AssemblyName>task1.8NoPositive</AssemblyName>
+    <RootNamespace>task1._9NonNegativeSum</RootNamespace>
+    <AssemblyName>task1.9NonNegativeSum</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="task1.8.cs" />
+    <Compile Include="task1.9.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

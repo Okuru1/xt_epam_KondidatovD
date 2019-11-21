@@ -103,13 +103,16 @@ namespace OtherClasses
         /// <param name="randomValue">Верхний порог случайного значения</param>
         /// <param name="inConsole">Вывод в консоль</param>
         /// <returns></returns>
-        public static int[] CreateArray(int size, int randomValue, bool inConsole = false)
+        public static int[] CreateArray(int size, int randomValue, bool negative = false, bool inConsole = false)
         {
             Random r = new Random();
             int[] array = new int[size];
             for (int i = 0; i<size;i++)
             {
-                array[i]=r.Next(randomValue);
+                if (!negative)
+                    array[i] = r.Next(randomValue);
+                else
+                    array[i] = r.Next(randomValue*2)-(randomValue-20);
             }
             if (inConsole)
                 for (int i = 0; i < size; i++)
@@ -124,13 +127,16 @@ namespace OtherClasses
         /// <param name="randomValue">Верхний порог случайного значения</param>
         /// <param name="inConsole">Вывод в консоль</param>
         /// <returns></returns>
-        public static double[] CreateDoubleArray(int size, int randomValue, bool inConsole = false)
+        public static double[] CreateDoubleArray(int size, int randomValue, bool negative = false, bool inConsole = false)
         {
             Random r = new Random();
             double[] array = new double[size];
             for (int i = 0; i < size; i++)
             {
-                array[i] = r.Next(randomValue)*r.NextDouble();
+                if (!negative)
+                    array[i] = r.Next(randomValue) * r.NextDouble();
+                else
+                    array[i] = (r.Next(randomValue * 2) * r.NextDouble()) - (randomValue*r.NextDouble());            
             }
             if (inConsole)
                 for (int i = 0; i < size; i++)
@@ -246,6 +252,35 @@ namespace OtherClasses
                         arr[i, j] = temp[count];
                         count++;
                     }
+            }
+        }
+
+        /// <summary>
+        /// Суммирование положительных элементов массива
+        /// </summary>
+        public class SummOfElements
+        {
+            public static int IntPositiveSum(int[] array,bool inConsole=false)
+            {
+                int sum=0;
+                int size = array.GetLength(0);
+                for (int i = 0; i < size; i++)
+                    if (array[i] > 0)
+                        sum += array[i];
+                if (inConsole)
+                   Console.Write($"\n\rThe sum of the positive elements of the array is: {sum} ");
+                return sum;
+            }
+            public static double DoubPositiveSum(double[] array, bool inConsole = false)
+            {
+                double sum = 0;
+                int size = array.GetLength(0);
+                for (int i = 0; i < size; i++)
+                    if (array[i] > 0)
+                        sum += array[i];
+                if (inConsole)
+                    Console.Write($"\n\rThe sum of the positive elements of the array is: {sum:F4} ");
+                return sum;
             }
         }
     }
