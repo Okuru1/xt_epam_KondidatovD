@@ -72,16 +72,35 @@ namespace task0._4
         static void Main(string[] args)
         {
             Random r = new Random();
-            int n,m;
-            //Вводим размерность массива
-            Console.WriteLine("Enter N");
-            n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter M");
-            m = Convert.ToInt32(Console.ReadLine());
-            int[,] arr = new int[n, m];
-            for (int i = 0; i < n; i++)
-                for (int j = 0; j < m; j++)
-                    arr[i, j] = r.Next(1, 100);
+            int n=0,m=0,q=1;
+            Console.WriteLine("1 or 2 ");
+            q = Convert.ToInt32(Console.ReadLine());
+            if (q == 1)
+            {
+                //Вводим размерность массива
+                Console.WriteLine("Enter N");
+                n = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter M");
+                m = Convert.ToInt32(Console.ReadLine());
+                int[,] arr = new int[n, m];
+                for (int i = 0; i < n; i++)
+                    for (int j = 0; j < m; j++)
+                        arr[i, j] = r.Next(1, 100);
+            }
+            else
+            {
+                int[] array = new int[n];
+                Console.WriteLine("Enter N");
+                n = Convert.ToInt32(Console.ReadLine());
+                for (int i = 0; i < n; i++)
+                {
+                    Console.WriteLine("Enter M");
+                    m = Convert.ToInt32(Console.ReadLine());
+                    for (int j = 0; j < m; j++)
+                        arr[i, j] = r.Next(1, 100);
+                }
+
+            }
             //Вывод неотсортированного массива
             Console.WriteLine("Unsorted array: ");
             for (int i = 0; i < n; i++)

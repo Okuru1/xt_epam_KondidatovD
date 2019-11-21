@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Menu
 {
@@ -45,12 +41,12 @@ namespace Menu
                     case 3:
                         task1_3.Program.Main();
                         break;
-                    //case 4:
-                    //    task1_4.Program.Main();
-                    //    break;
-                    //case 5:
-                    //    task1_5.Program.Main();
-                    //    break;
+                    case 4:
+                        task1_4.Program.Main();
+                        break;
+                    case 5:
+                        task1_5.Program.Main();
+                        break;
                     //case 6:
                     //    task1_6.Program.Main();
                     //    break;
@@ -69,7 +65,6 @@ namespace Menu
                 };
                 Console.WriteLine("\n\rProgram completed, select next action");
             } while (c != 0);
-            Console.ReadKey();
         }
     }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{141DE7E9-5E12-4A60-8F66-A1F9A4998807}</ProjectGuid>
+    <ProjectGuid>{7A136891-B02C-4DF6-A229-5A4318F09D09}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Menu</RootNamespace>
-    <AssemblyName>Menu</AssemblyName>
+    <RootNamespace>task1._5SumOfNumbers</RootNamespace>
+    <AssemblyName>task1.5SumOfNumbers</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,38 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OtherClasses.cs" />
-    <Compile Include="Menu.cs" />
+    <Compile Include="task1.5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\task1.1\task1.1Rectangle.csproj">
-      <Project>{83fca706-b8c4-4598-a9f7-e227a15800f0}</Project>
-      <Name>task1.1Rectangle</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\task1.2\task1.2Triangle.csproj">
-      <Project>{2dcb27b3-611e-4365-a96f-febb4ae6f2c7}</Project>
-      <Name>task1.2Triangle</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\task1.3\task1.3AnotherTriangle.csproj">
-      <Project>{8b73c5aa-8931-4ac8-8e82-78f60dba15c0}</Project>
-      <Name>task1.3AnotherTriangle</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\task1.4\task1.4\task1.4X-masTree.csproj">
-      <Project>{5a9f4628-c28d-4686-b80e-f65fcd302b80}</Project>
-      <Name>task1.4X-masTree</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\task1.5SumOfNumbers\task1.5SumOfNumbers.csproj">
-      <Project>{7a136891-b02c-4df6-a229-5a4318f09d09}</Project>
-      <Name>task1.5SumOfNumbers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\task1.6FontAdjustment\task1.6FontAdjustment.csproj">
-      <Project>{22ed4159-5043-4d0d-86ae-b4da939c8b5d}</Project>
-      <Name>task1.6FontAdjustment</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
