@@ -50,9 +50,9 @@ namespace Menu
                     case 6:
                         task1_6.Program.Main();
                         break;
-                    //case 7:
-                    //    task1_7.Program.Main();
-                    //    break;
+                    case 7:
+                        task1_7.Program.Main();
+                        break;
                     //case 8:
                     //    task1_8.Program.Main();
                     //    break;

@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtherClasses", "OtherClasse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task1.7ArrayProcessing", "task1.7ArrayProcessing\task1.7ArrayProcessing.csproj", "{5AB67745-CAFA-45AA-BD60-9BA22ABA0D58}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task1.8NoPositive", "task1.8NoPositive\task1.8NoPositive.csproj", "{88B964E4-5252-4F03-BA5F-B01D59E790BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{5AB67745-CAFA-45AA-BD60-9BA22ABA0D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AB67745-CAFA-45AA-BD60-9BA22ABA0D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AB67745-CAFA-45AA-BD60-9BA22ABA0D58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B964E4-5252-4F03-BA5F-B01D59E790BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B964E4-5252-4F03-BA5F-B01D59E790BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B964E4-5252-4F03-BA5F-B01D59E790BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B964E4-5252-4F03-BA5F-B01D59E790BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -78,6 +78,10 @@
       <Project>{22ed4159-5043-4d0d-86ae-b4da939c8b5d}</Project>
       <Name>task1.6FontAdjustment</Name>
     </ProjectReference>
+    <ProjectReference Include="..\task1.7ArrayProcessing\task1.7ArrayProcessing.csproj">
+      <Project>{5ab67745-cafa-45aa-bd60-9ba22aba0d58}</Project>
+      <Name>task1.7ArrayProcessing</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
