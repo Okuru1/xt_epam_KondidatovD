@@ -119,7 +119,31 @@ namespace OtherClasses
                     Console.Write($"{array[i]} ");
             return array;
         } 
-        
+        public static int[,] CreateArray(int size1,int size2, int randomValue, bool negative = false, bool inConsole = false)
+        {
+            Random r = new Random();
+            int[,] array = new int[size1,size2];
+            for (int i = 0; i < size1; i++)
+                for (int j = 0; j < size2; j++)
+                {
+                if (!negative)
+                    array[i,j] = r.Next(randomValue);
+                else
+                    array[i,j] = r.Next(randomValue * 2) - (randomValue - 20);
+            }
+            if (inConsole)
+            {
+                Console.WriteLine("Created array:"); 
+                for (int i = 0; i < size1; i++)
+                {
+                    for (int j = 0; j < size2; j++)
+                        Console.Write($"{array[i, j]} ");
+                    Console.WriteLine("\n\r");
+                }
+            }
+
+            return array;
+        }       
         /// <summary>
         /// Инициализация вещественного массива
         /// </summary>
@@ -143,7 +167,8 @@ namespace OtherClasses
                     Console.Write($"{array[i]:F4} ");
             return array;
         }
-       
+        
+
         /// <summary>
         /// Быстрая сортировка
         /// </summary>

@@ -54,6 +54,18 @@
       <Project>{1e84534e-7bfd-40ce-9c4d-c09d165f5a11}</Project>
       <Name>OtherClasses</Name>
     </ProjectReference>
+    <ProjectReference Include="..\task1.10_2D_Array\task1.10_2D_Array.csproj">
+      <Project>{2e31fc64-7820-4e83-9bd6-41989d063472}</Project>
+      <Name>task1.10_2D_Array</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\task1.11AverageStringLength\task1.11AverageStringLength.csproj">
+      <Project>{2329d896-2a10-4204-b48a-2e2ecc952c41}</Project>
+      <Name>task1.11AverageStringLength</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\task1.12CharDoubler\task1.12CharDoubler.csproj">
+      <Project>{453cbd03-559f-40b6-80fc-7e526bb1429d}</Project>
+      <Name>task1.12CharDoubler</Name>
+    </ProjectReference>
     <ProjectReference Include="..\task1.1\task1.1Rectangle.csproj">
       <Project>{83fca706-b8c4-4598-a9f7-e227a15800f0}</Project>
       <Name>task1.1Rectangle</Name>

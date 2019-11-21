@@ -59,15 +59,15 @@ namespace Menu
                     case 9:
                         task1_9.Program.Main();
                         break;
-                    //case 10:
-                    //    task1_10.Program.Main();
-                    //    break;
-                    //case 11:
-                    //    task1_11.Program.Main();
-                    //    break;
-                    //case 12:
-                    //    task1_12.Program.Main();
-                    //    break;
+                    case 10:
+                        task1_10.Program.Main();
+                       break;
+                    case 11:
+                        task1_11.Program.Main();
+                        break;
+                    case 12:
+                        task1_12.Program.Main();
+                        break;
                 };
                 Console.WriteLine("\n\rProgram completed, select next action");
             } while (c != 0);
