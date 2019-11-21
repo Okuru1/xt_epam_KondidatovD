@@ -10,9 +10,9 @@ namespace task1_1
         {
             Console.WriteLine("Task 1.1 for XT_EPAM"+"\n\r--------------------");
             Console.WriteLine("Enter X");
-            double x = InputFromConsole.IsDouble();
+            double x = OtherClasses.InputFromConsole.IsDouble();
             Console.WriteLine("\n\rEnter Y");
-            double y = InputFromConsole.IsDouble();
+            double y = OtherClasses.InputFromConsole.IsDouble();
             RectangleSquare(x, y);
             return;
             
@@ -22,40 +22,6 @@ namespace task1_1
             double square = a*b;
             Console.WriteLine("\n\r"+$"Square Rectangle is {square}");
             return square;
-        }
-    }
-    //Класс, в котором содержатся методы ввода значений через консоль с проверкой
-    class InputFromConsole
-    {
-        public static int IsInteger()
-        {
-            int input = 0;
-            bool check = false;
-            //Проверка вводимых числовых значений > 0, пока пользователь не введёт корректные значения
-            while (!check)
-            {
-               if(Int32.TryParse(Console.ReadLine(), out input))
-                    if (input > 0)
-                    check = true;
-                    else
-                    Console.WriteLine("Enter the correct data");
-            }
-            return input;
-        }
-        public static double IsDouble()
-        {
-            double input = 0;
-            bool check = false;
-            //Проверка вводимых числовых значений > 0, пока пользователь не введёт корректные значения
-            while (!check)
-            {
-                if (Double.TryParse(Console.ReadLine(), out input))
-                    if (input > 0)
-                        check = true;
-                    else
-                        Console.WriteLine("Enter the correct data");
-            }
-            return input;
         }
     }
 }

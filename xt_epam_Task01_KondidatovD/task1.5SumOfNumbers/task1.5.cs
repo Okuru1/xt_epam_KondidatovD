@@ -6,6 +6,7 @@ namespace task1_5
     {
         public static void Main()
         {
+            Console.WriteLine("Task 1.5 for XT_EPAM" + "\n\r--------------------");
             int i = 0;
             int n = 1000;
             int sum = 0;

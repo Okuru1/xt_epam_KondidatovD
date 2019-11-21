@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29418.71
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{808DF9C8-296F-48BF-829A-56B002C10599}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", "{141DE7E9-5E12-4A60-8F66-A1F9A4998807}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task1.2Triangle", "task1.2\task1.2Triangle.csproj", "{2DCB27B3-611E-4365-A96F-FEBB4AE6F2C7}"
@@ -18,6 +16,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task1.5SumOfNumbers", "task1.5SumOfNumbers\task1.5SumOfNumbers.csproj", "{7A136891-B02C-4DF6-A229-5A4318F09D09}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task1.6FontAdjustment", "task1.6FontAdjustment\task1.6FontAdjustment.csproj", "{22ED4159-5043-4D0D-86AE-B4DA939C8B5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtherClasses", "OtherClasses\OtherClasses.csproj", "{1E84534E-7BFD-40CE-9C4D-C09D165F5A11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "task1.7ArrayProcessing", "task1.7ArrayProcessing\task1.7ArrayProcessing.csproj", "{5AB67745-CAFA-45AA-BD60-9BA22ABA0D58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,14 @@ Global
 		{22ED4159-5043-4D0D-86AE-B4DA939C8B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22ED4159-5043-4D0D-86AE-B4DA939C8B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22ED4159-5043-4D0D-86AE-B4DA939C8B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E84534E-7BFD-40CE-9C4D-C09D165F5A11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E84534E-7BFD-40CE-9C4D-C09D165F5A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E84534E-7BFD-40CE-9C4D-C09D165F5A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E84534E-7BFD-40CE-9C4D-C09D165F5A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AB67745-CAFA-45AA-BD60-9BA22ABA0D58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AB67745-CAFA-45AA-BD60-9BA22ABA0D58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AB67745-CAFA-45AA-BD60-9BA22ABA0D58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AB67745-CAFA-45AA-BD60-9BA22ABA0D58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

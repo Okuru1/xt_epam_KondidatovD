@@ -28,7 +28,7 @@ namespace Menu
             do
             {                
                 c = OtherClasses.InputFromConsole.IsInteger(true,true);
-                Console.WriteLine("\n\r");
+                //Console.WriteLine("\n\r");
 
                 switch (c)
                 {
@@ -47,9 +47,9 @@ namespace Menu
                     case 5:
                         task1_5.Program.Main();
                         break;
-                    //case 6:
-                    //    task1_6.Program.Main();
-                    //    break;
+                    case 6:
+                        task1_6.Program.Main();
+                        break;
                     //case 7:
                     //    task1_7.Program.Main();
                     //    break;

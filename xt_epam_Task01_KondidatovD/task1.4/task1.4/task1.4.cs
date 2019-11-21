@@ -11,7 +11,7 @@ namespace task1_4
             Console.WriteLine("Task 1.4 for XT_EPAM" + "\n\r--------------------");
             Console.WriteLine("Enter number of rows");
             //Получаем значение N с консоли и инициализируем стрингбилдер
-            n = InputFromConsole.IsInteger();
+            n = OtherClasses.InputFromConsole.IsInteger();
             Console.WriteLine("\n\r");
             StringBuilder tree = new StringBuilder();
             //Используя вложенный цикл выводим заданное количество треугольников.
@@ -35,41 +35,6 @@ namespace task1_4
                 m++;
             }
             return;
-        }
-
-        //Класс, в котором содержатся методы ввода значений через консоль с проверкой
-        class InputFromConsole
-        {
-            public static int IsInteger()
-            {
-                int input = 0;
-                bool check = false;
-                //Проверка вводимых числовых значений > 0, пока пользователь не введёт корректные значения
-                while (!check)
-                {
-                    if (Int32.TryParse(Console.ReadLine(), out input))
-                        if (input > 0)
-                            check = true;
-                        else
-                            Console.WriteLine("Enter the correct data");
-                }
-                return input;
-            }
-            public static double IsDouble()
-            {
-                double input = 0;
-                bool check = false;
-                //Проверка вводимых числовых значений > 0, пока пользователь не введёт корректные значения
-                while (!check)
-                {
-                    if (Double.TryParse(Console.ReadLine(), out input))
-                        if (input > 0)
-                            check = true;
-                        else
-                            Console.WriteLine("Enter the correct data");
-                }
-                return input;
-            }
         }
     }
 }

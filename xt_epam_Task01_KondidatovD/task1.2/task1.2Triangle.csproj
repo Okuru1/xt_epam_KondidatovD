@@ -76,5 +76,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OtherClasses\OtherClasses.csproj">
+      <Project>{1e84534e-7bfd-40ce-9c4d-c09d165f5a11}</Project>
+      <Name>OtherClasses</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
