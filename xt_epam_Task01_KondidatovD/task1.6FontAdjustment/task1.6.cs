@@ -4,14 +4,6 @@ namespace task1_6
 {
     public class Program
     {
-        enum Fonts
-        {
-            Bold = 1,
-            Italic,
-            Underline,
-            None
-        }
-
         public static void Main()
         {
             Console.WriteLine("Task 1.6 for XT_EPAM" + "\n\r--------------------");
@@ -19,7 +11,7 @@ namespace task1_6
             bool[] properties = new bool[3];
             do
             {
-                ShowTextProperties(properties);
+                showTextProperties(properties);
                 c = OtherClasses.InputFromConsole.IsInteger(true);
                 switch (c)
                 {
@@ -36,7 +28,7 @@ namespace task1_6
             } while (c != 0);
         }
 
-        static void ShowTextProperties(bool[] properties)
+        static void showTextProperties(bool[] properties)
         {
             Console.WriteLine("Text Properties is: ");
             //Если свойства не выбраны, то выводим None
@@ -60,7 +52,15 @@ namespace task1_6
                 + "\n\r 2: Italic"
                 + "\n\r 3: Underline"
                 + "\n\r 0 to exit");
-        }       
+        }
+
+        enum Fonts
+        {
+            Bold = 1,
+            Italic,
+            Underline,
+            None
+        }
     }
 }
 

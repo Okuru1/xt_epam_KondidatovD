@@ -15,24 +15,37 @@ namespace task1_7
             switch (n)
             {
                 case 1:
-                    Console.WriteLine("Enter the number of elements in the Integer array");
-                    n = InputFromConsole.IsInteger(true);
-                    int[] intArray = Arrays.CreateArray(n,n,false,true);
-                    MaxElement.Max(intArray,true);
-                    Arrays.QSort.Start(ref intArray, 0, n - 1);
-                    for (int i = 0; i < n; i++)
-                        Console.Write($"{intArray[i]} ");
+                    processingIntegerArray();
                     break;
                 case 2:
-                    Console.WriteLine("Enter the number of elements in the Double array");
-                    n = InputFromConsole.IsInteger(true);
-                    double[] doubArray = Arrays.CreateDoubleArray(n,n,false,true);
-                    MaxElement.Max(doubArray,true);
-                    Arrays.QSort.Start(ref doubArray, 0, n - 1);
-                    for (int i = 0; i < n; i++)
-                        Console.Write($"{doubArray[i]:F4} ");
+                    processingDoubleArray();
                     break;
             }            
         }
+
+        static void processingIntegerArray() 
+        {
+            int n;
+            Console.WriteLine("Enter the number of elements in the Integer array");
+            n = InputFromConsole.IsInteger(true);//считываем количество элементов
+            int[] intArray = Arrays.CreateArray(n, n, false, true); //создаем массив
+            MaxElement.Max(intArray, true);//определяем и выводим максимальный элемент
+            Arrays.QSort.Start(ref intArray, 0, n - 1); //сортируем массив
+            for (int i = 0; i < n; i++)//выводим массив
+                Console.Write($"{intArray[i]} ");
+        }
+
+        static void processingDoubleArray()
+        {
+            int n;
+            Console.WriteLine("Enter the number of elements in the Double array");
+            n = InputFromConsole.IsInteger(true); //считываем количество элементов
+            double[] doubArray = Arrays.CreateDoubleArray(n, n, false, true); //создаем массив
+            MaxElement.Max(doubArray, true); //определяем и выводим максимальный элемент
+            Arrays.QSort.Start(ref doubArray, 0, n - 1); //сортируем массив
+            for (int i = 0; i < n; i++) //выводим массив
+                Console.Write($"{doubArray[i]:F4} ");
+        }
+
     }
 }

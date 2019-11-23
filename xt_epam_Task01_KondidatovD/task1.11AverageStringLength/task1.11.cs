@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace task1_11
 {
@@ -16,7 +14,7 @@ namespace task1_11
             Console.WriteLine("Task 1.11 for XT_EPAM" + "\n\r--------------------");
             s = Console.ReadLine();
             StringBuilder str = new StringBuilder(s); 
-            RemovePunctuation(ref str, true); //Удаляем знаки пунктуации 
+            removePunctuation(ref str, true); //Удаляем знаки пунктуации 
             s = str.ToString();
             arrayOfStrings = s.Split(null as string[], StringSplitOptions.RemoveEmptyEntries);           
             if (arrayOfStrings.Length - 1 != 0)
@@ -41,7 +39,7 @@ namespace task1_11
             }
         }
 
-        static void RemovePunctuation(ref StringBuilder inputString, bool inConsole = false)
+        static void removePunctuation(ref StringBuilder inputString, bool inConsole = false)
         {
             for (int i = inputString.Length - 1; i >= 0; i--)
                 if (char.IsPunctuation(inputString[i]))

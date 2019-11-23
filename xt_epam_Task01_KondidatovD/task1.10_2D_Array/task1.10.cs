@@ -12,8 +12,8 @@ namespace task1_10
             Console.WriteLine("Enter array size: \n\rN x M ");
             n = InputFromConsole.IsInteger();
             m = InputFromConsole.IsInteger();
-            int [,] array = Arrays.CreateArray(n, m, n*10, false, true);
-
+            int [,] array = Arrays.CreateArray(n, m, n*10, false, true); //Создаем и заполняем массив
+            //Высчитываем сумму элементов на четных позициях
             for (int i = 0; i < n; i++)
                 for (int j = 0; j < m; j++)
                     if ((i+j)%2==0)
