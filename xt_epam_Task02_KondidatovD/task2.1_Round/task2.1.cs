@@ -51,7 +51,7 @@ namespace task2_1
         }
         private double square(double r)
         {
-            return 2 * Math.PI * (r*r);
+            return Math.PI * (r*r);
         }
 
         public Round(int c, double r) 
