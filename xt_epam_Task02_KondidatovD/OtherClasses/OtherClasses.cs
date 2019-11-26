@@ -47,10 +47,13 @@ namespace OtherClasses
         {
             double input = 0;
             bool check = false;
+            string inputData;
             //Проверка вводимых числовых значений > 0, пока пользователь не введёт корректные значения
             while (!check)
             {
-                if (Double.TryParse(Console.ReadLine(), out input))
+                inputData = Console.ReadLine();
+                inputData = inputData.Replace('.', ',');             
+                if (Double.TryParse(inputData, out input))
                     if (input > 0)
                         check = true;
                     else

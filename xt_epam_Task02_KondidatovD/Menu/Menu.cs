@@ -14,21 +14,14 @@ namespace Menu
             int c = 0;
             Console.WriteLine("XT_EPAM_2019 TASK-01 C# Basics by Kondidatov Dmitriy"
                     + "\n\rChoose Task: "
-                    + "\n\rC# BASICS:"
-                    + "\n\r1)  Task 1.1  - Rectangle"
-                    + "\n\r2)  Task 1.2  - Triangle"
-                    + "\n\r3)  Task 1.3  - Another Triangle"
-                    + "\n\r4)  Task 1.4  - X-Mas Tree"
-                    + "\n\r5)  Task 1.5  - Sum of Numbers"
-                    + "\n\r6)  Task 1.6  - Font Adjustment"
-                    + "\n\rC# LANGUAGE:"
-                    + "\n\r7)  Task 1.7  - Array Processing"
-                    + "\n\r8)  Task 1.8  - No Positive"
-                    + "\n\r9)  Task 1.9  - Non Negative Sum"
-                    + "\n\r10) Task 1.10 - 2D Array"
-                    + "\n\rC# STRINGS:"
-                    + "\n\r11) Task 1.11 - Average String Length"
-                    + "\n\r12) Task 1.12 - Char Doubler"
+                    + "\n\r1)  Task 2.1  - Round"
+                    + "\n\r2)  Task 2.2  - Triangle"
+                    + "\n\r3)  Task 2.3  - User"
+                    + "\n\r4)  Task 2.4  - My String"
+                    + "\n\r5)  Task 2.5  - Employee"
+                    + "\n\r6)  Task 2.6  - Ring"
+                    + "\n\r7)  Task 2.7  - Vector Graphics Editor"
+                    + "\n\r8)  Task 2.8  - Game"
                     + "\n\rEnter 0 for exit\n\r");
             do
             {
@@ -40,12 +33,12 @@ namespace Menu
                     case 1:
                         task2_1.Program.Main();
                         break;
-                    //case 2:
-                    //    task2_2.Program.Main();
-                    //    break;
-                    //case 3:
-                    //    task2_3.Program.Main();
-                    //    break;
+                    case 2:
+                        task2_2.Program.Main();
+                        break;
+                    case 3:
+                        task2_3.Program.Main();
+                        break;
                     //case 4:
                     //    task2_4.Program.Main();
                     //    break;

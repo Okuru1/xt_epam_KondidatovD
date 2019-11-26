@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3FE1B267-520F-4A1D-ACEC-23932E00A741}</ProjectGuid>
+    <ProjectGuid>{FA5ECADD-97B7-4061-A5CF-3B8204E6EB99}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Menu</RootNamespace>
-    <AssemblyName>Menu</AssemblyName>
+    <RootNamespace>tesk2._3_User</RootNamespace>
+    <AssemblyName>tesk2.3_User</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu.cs" />
+    <Compile Include="task2.3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,22 +53,6 @@
     <ProjectReference Include="..\OtherClasses\OtherClasses.csproj">
       <Project>{5457d120-bb2c-4be1-918a-6463b6f79128}</Project>
       <Name>OtherClasses</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Task2.1_Round\task2.1_Round.csproj">
-      <Project>{9cd60025-02b9-4aae-acfc-ec4c89e4f31b}</Project>
-      <Name>task2.1_Round</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\task2.2_Triangle\task2.2_Triangle.csproj">
-      <Project>{9b92917a-69c2-4b19-80ec-87700cd5794c}</Project>
-      <Name>task2.2_Triangle</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\task2.4_MyString\task2.4_MyString.csproj">
-      <Project>{01b923c9-cfce-473e-ae50-85819ea1c762}</Project>
-      <Name>task2.4_MyString</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\tesk2.3_User\task2.3_User.csproj">
-      <Project>{fa5ecadd-97b7-4061-a5cf-3b8204e6eb99}</Project>
-      <Name>task2.3_User</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

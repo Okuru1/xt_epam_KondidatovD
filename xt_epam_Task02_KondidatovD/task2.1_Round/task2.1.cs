@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using OtherClasses;
 
 namespace task2_1
 {
@@ -10,54 +7,75 @@ namespace task2_1
     {
         public static void Main()
         {
-            Round Circle = new Round(1,2);            
+            Console.WriteLine("Task 2.1 for XT_EPAM" + "\n\r--------------------");
+            int x;           
+            int y;
+            double r;
 
-            Console.WriteLine(Convert.ToString(Circle.getCenter()));
-            Console.WriteLine(Convert.ToString(Circle.getRadius()));
-            Console.WriteLine(Convert.ToString(Circle.getCircumference()));
-            Console.WriteLine(Convert.ToString(Circle.getSquare()));
+            Console.WriteLine("Enter X:");
+            x = InputFromConsole.IsInteger();
+            Console.WriteLine("Enter Y:");
+            y = InputFromConsole.IsInteger();
+            Console.WriteLine("Enter R:");
+            r = InputFromConsole.IsDouble();
 
+            Round Circle = new Round(x, y, r);
+
+            Circle.GetInfo();
         }
-
-
     }
-
+    
     public class Round
     {
-        int Center;
-        double Radius;
+        private int X;
+        private int Y;
+        private double R;
 
-        public int getCenter()
+        public int GetX()
         {
-            return Center;
+            return X;
         }
-        public double getRadius()
+        public int GetY()
         {
-            return Radius;
+            return Y;
+        }
+        public double GetRadius()
+        {
+            return R;
         }
 
-        public double getCircumference() 
+        public double GetCircumference() 
         {
-            return circumference(Radius);
+            return circumference(R);
         } 
         private double circumference(double r)
         {
             return 2 * Math.PI * r;
         }
 
-        public double getSquare()
+        public double GetSquare()
         {
-            return square(Radius);
+            return square(R);
         }
         private double square(double r)
         {
             return Math.PI * (r*r);
         }
 
-        public Round(int c, double r) 
+        public void GetInfo()
         {
-            Center = c;
-            Radius = r;
+            Console.WriteLine($"X = {X}");
+            Console.WriteLine($"Y = {Y}");
+            Console.WriteLine($"R = {R:F4}");
+            Console.WriteLine($"Circumference = {GetCircumference():F4}");
+            Console.WriteLine($"Square of Circle = {GetSquare():F4}");
+        }
+
+        public Round(int x, int y, double r)
+        {
+            X = x;
+            Y = y;
+            R = r;
         }
     }
 };
