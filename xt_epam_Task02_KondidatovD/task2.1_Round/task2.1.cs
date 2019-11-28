@@ -8,7 +8,7 @@ namespace task2_1
         public static void Main()
         {
             Console.WriteLine("Task 2.1 for XT_EPAM" + "\n\r--------------------");
-            int x;           
+            int x;
             int y;
             double r;
 
@@ -19,35 +19,38 @@ namespace task2_1
             Console.WriteLine("Enter R:");
             r = InputFromConsole.IsDouble();
 
+            Point p1 = new Point(x, y);
+
             Round Circle = new Round(x, y, r);
+            Round Circle2 = new Round(p1, r);
 
             Circle.GetInfo();
+            Circle2.GetInfo();
         }
     }
-    
+
     public class Round
     {
-        private int X;
-        private int Y;
+        private Point Center;
         private double R;
 
         public int GetX()
         {
-            return X;
+            return Center.X;
         }
         public int GetY()
         {
-            return Y;
+            return Center.Y;
         }
         public double GetRadius()
         {
             return R;
         }
 
-        public double GetCircumference() 
+        public double GetCircumference()
         {
             return circumference(R);
-        } 
+        }
         private double circumference(double r)
         {
             return 2 * Math.PI * r;
@@ -59,13 +62,13 @@ namespace task2_1
         }
         private double square(double r)
         {
-            return Math.PI * (r*r);
+            return Math.PI * (r * r);
         }
 
         public void GetInfo()
         {
-            Console.WriteLine($"X = {X}");
-            Console.WriteLine($"Y = {Y}");
+            Console.WriteLine($"X = {Center.X}");
+            Console.WriteLine($"Y = {Center.Y}");
             Console.WriteLine($"R = {R:F4}");
             Console.WriteLine($"Circumference = {GetCircumference():F4}");
             Console.WriteLine($"Square of Circle = {GetSquare():F4}");
@@ -73,9 +76,26 @@ namespace task2_1
 
         public Round(int x, int y, double r)
         {
+            Center.X = x;
+            Center.Y = y;
+            R = r;
+        }
+        public Round(Point center, double r)
+        {
+            Center = center;
+            R = r;
+        }
+    }
+    
+    public class Point
+    {
+        public int X;
+        public int Y;
+
+        public Point(int x, int y)
+        {
             X = x;
             Y = y;
-            R = r;
         }
     }
 };

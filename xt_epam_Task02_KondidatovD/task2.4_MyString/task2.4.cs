@@ -10,38 +10,61 @@ namespace task2_4
     {
         public static void Main()
         {
-
-
+            MyString stringOne = new MyString('s','r','e');
+            char c = 's';
+            stringOne.Append(c);
+            string str = stringOne.GetString();
+            Console.WriteLine(str);
+            stringOne.Concat(str);
+            stringOne.Concat(str);
+            stringOne.Concat(str);
+            stringOne.Concat('a', 'b', 'c');
+            str = stringOne.GetString();
+            Console.WriteLine(str);
         }
     }
 
     public class MyString
     {
-        char[] Str;
+        private char[] Str;
+        private int Elements;
 
         public string GetString()
         {
-            return Convert.ToString(Str);
+            string result = new string(Str);
+            return result; 
         }
 
-        public char[] Concat(char[] Str, char input)
+        public char[] Append(char input)
         {
-            Str.Append(input);
+            Str = memoryReserve(Elements+1);
+            Str[Elements] = input;            
+            Elements++;
             return Str;
         }
-        public char[] Concat(char[] Str, char[] input)
-        {
-            for (int i = 0; i < input.Length; i++)
+
+        public char[] Concat(params char[] input)
+        { 
+            Str = memoryReserve(Elements + input.Length);
+            for (int i = 0; i < input.Length; i++)  
             {
-                Str.Append(input[i]);
+                Str[Elements] = input[i];
+                Elements++;
+                if (input[i] == '\0')
+                    break;
+
             }
             return Str;
         }
-        public char[] Concat(char[] Str, string input)
-        {
-            for (int i = 0; i < input.Length; i++)
+        public char[] Concat(string input)
+        {            
+            int i = 0;
+            Str = memoryReserve(Elements + input.Length);
+            while ((input[i] != '\0') && (i < input.Length))
             {
-                Str.Append(input[i]);
+                Str[Elements] = input[i];
+                Elements++;
+                i++;
             }
             return Str;
         }
@@ -72,17 +95,59 @@ namespace task2_4
             return position;
         }
 
-        public MyString() : this("")
+        private char[] memoryReserve(int inputLength)
         {
+            int strLength;
+
+            strLength = Str?.Length ?? 8;
+
+            if (Str == null)
+            {
+                while (strLength < inputLength)
+                    strLength *= 2;
+                return new char[strLength];
+            }
+            else
+            {
+                if (strLength < inputLength)
+                {
+                    while (strLength < inputLength)
+                        strLength *= 2;
+                    char[] temp = new char[strLength];
+                    for (int i = 0; i < Elements; i++)
+                        temp[i] = Str[i];
+                    return temp;
+                }
+                else
+                    return Str;
+            }
         }
-        public MyString(char[] str)
+        
+        public MyString(params char[] input)
         {
-            Str = str;
+            if (input.Length != 0)
+            {
+                Str = memoryReserve(input.Length);
+                for (int i = 0; i < input.Length; i++)
+                {
+                    Str[i] = input[i];
+                    Elements++;
+                }
+            } 
+            else
+            {
+                Str = new char[8];
+                Elements = 0;
+            }
         }
         public MyString(string str)
         {
+            Str = memoryReserve(str.Length);
             for (int i = 0; i < str.Length; i++)
-                Str.Append(str[i]);
-        }  
+            {
+                Str[i] = str[i];
+                Elements++;
+            }     
+        } 
     }
 }

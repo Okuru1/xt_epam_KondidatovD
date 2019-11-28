@@ -39,9 +39,9 @@ namespace Menu
                     case 3:
                         task2_3.Program.Main();
                         break;
-                    //case 4:
-                    //    task2_4.Program.Main();
-                    //    break;
+                    case 4:
+                        task2_4.Program.Main();
+                        break;
                     //case 5:
                     //    task2_5.Program.Main();
                     //    break;
