@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3FE1B267-520F-4A1D-ACEC-23932E00A741}</ProjectGuid>
+    <ProjectGuid>{E1B75B07-3D50-491E-A3FC-FA02B05ED020}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Menu</RootNamespace>
-    <AssemblyName>Menu</AssemblyName>
+    <RootNamespace>task2._5_Employee</RootNamespace>
+    <AssemblyName>task2.5_Employee</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu.cs" />
+    <Compile Include="task2.5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,30 +53,6 @@
     <ProjectReference Include="..\OtherClasses\OtherClasses.csproj">
       <Project>{5457d120-bb2c-4be1-918a-6463b6f79128}</Project>
       <Name>OtherClasses</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Task2.1_Round\task2.1_Round.csproj">
-      <Project>{9cd60025-02b9-4aae-acfc-ec4c89e4f31b}</Project>
-      <Name>task2.1_Round</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\task2.2_Triangle\task2.2_Triangle.csproj">
-      <Project>{9b92917a-69c2-4b19-80ec-87700cd5794c}</Project>
-      <Name>task2.2_Triangle</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\task2.4_MyString\task2.4_MyString.csproj">
-      <Project>{01b923c9-cfce-473e-ae50-85819ea1c762}</Project>
-      <Name>task2.4_MyString</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\task2.5_Employee\task2.5_Employee.csproj">
-      <Project>{e1b75b07-3d50-491e-a3fc-fa02b05ed020}</Project>
-      <Name>task2.5_Employee</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\task2.6_Ring\task2.6_Ring.csproj">
-      <Project>{21e2c448-0fbc-4420-8e05-a3afd6ce83ec}</Project>
-      <Name>task2.6_Ring</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\tesk2.3_User\task2.3_User.csproj">
-      <Project>{fa5ecadd-97b7-4061-a5cf-3b8204e6eb99}</Project>
-      <Name>task2.3_User</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

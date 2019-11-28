@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace task2_4
 {
@@ -10,6 +6,7 @@ namespace task2_4
     {
         public static void Main()
         {
+            Console.WriteLine("Task 2.4 for XT_EPAM" + "\n\r--------------------");
             MyString stringOne = new MyString('s','r','e');
             char c = 's';
             stringOne.Append(c);
@@ -19,8 +16,12 @@ namespace task2_4
             stringOne.Concat(str);
             stringOne.Concat(str);
             stringOne.Concat('a', 'b', 'c');
+
             str = stringOne.GetString();
             Console.WriteLine(str);
+            int n;
+            stringOne.Find('q', out n);
+            stringOne.Find('a', out n);
         }
     }
 
@@ -74,11 +75,11 @@ namespace task2_4
             position = findChar(key);
             if (position == 0)
             {
-                Console.WriteLine("Key is not finded");
+                Console.WriteLine($"Key \"{key}\" is not finded");
             }
             else
             {
-                Console.WriteLine($"Char's position is: {position}");
+                Console.WriteLine($"Key \"{key}\" position is: {position}");
             }
         }
         private int findChar(char key)

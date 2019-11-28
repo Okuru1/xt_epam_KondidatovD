@@ -42,12 +42,12 @@ namespace Menu
                     case 4:
                         task2_4.Program.Main();
                         break;
-                    //case 5:
-                    //    task2_5.Program.Main();
-                    //    break;
-                    //case 6:
-                    //    task2_6.Program.Main();
-                    //    break;
+                    case 5:
+                        task2_5.Program.Main();
+                        break;
+                    case 6:
+                        task2_6.Program.Main();
+                        break;
                     //case 7:
                     //    task2_7.Program.Main();
                     //    break;

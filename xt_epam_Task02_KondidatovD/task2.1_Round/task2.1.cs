@@ -67,17 +67,17 @@ namespace task2_1
 
         public void GetInfo()
         {
-            Console.WriteLine($"X = {Center.X}");
-            Console.WriteLine($"Y = {Center.Y}");
-            Console.WriteLine($"R = {R:F4}");
-            Console.WriteLine($"Circumference = {GetCircumference():F4}");
-            Console.WriteLine($"Square of Circle = {GetSquare():F4}");
+            Console.WriteLine($"\n\rRound Information:"
+                + $"\n\rX = {Center.X}"
+                + $"\n\rY = {Center.Y}"
+                + $"\n\rR = {R:F4}"
+                + $"\n\rCircumference = {GetCircumference():F4}"
+                + $"\n\rSquare of Circle = {GetSquare():F4}");
         }
 
         public Round(int x, int y, double r)
         {
-            Center.X = x;
-            Center.Y = y;
+            Center = new Point(x, y);
             R = r;
         }
         public Round(Point center, double r)
