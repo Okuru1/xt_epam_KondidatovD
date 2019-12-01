@@ -23,12 +23,14 @@ namespace task2_2
 
     class Triangle
     {
-        public double A;
-        public double B;
-        public double C;
+        public readonly double A;
+        public readonly double B;
+        public readonly double C;
 
         public Triangle (double a, double b, double c)
         {
+            if ((a >= (b + c) || (b >= (a + c)) || (c >= (b + a))))
+                throw new ArgumentException("A non-existent triangle is specified. Each side must be less than the sum of the other two");
             A = a;
             B = b;
             C = c;

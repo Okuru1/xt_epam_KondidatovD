@@ -24,9 +24,10 @@ namespace task2_6
 
             Point center = new Point(x, y);
 
-            Round innerRound = new Round(center, innR);
-            Round outerRound = new Round(center, outR);
-
+            Round innerRound = new Round(center);
+            innerRound.Radius = innR;
+            Round outerRound = new Round(center);
+            outerRound.Radius = outR;
             outerRound.GetInfo();
             innerRound.GetInfo();
 
@@ -50,25 +51,26 @@ namespace task2_6
 
     public class Round
     {
-        public Point Center;
-        public double R;
+        public readonly Point Center;
+        private double _radius;
 
-        public int GetX()
+        public double Radius
         {
-            return Center.X;
-        }
-        public int GetY()
-        {
-            return Center.Y;
-        }
-        public double GetRadius()
-        {
-            return R;
+            get
+            {
+                return _radius;
+            }
+            set
+            {
+                if (value <= 0)
+                    throw new ArgumentException("Invalid Radius. Radius cannot be negative or zero.", "Radius");
+                _radius = value;
+            }
         }
 
         public double GetCircumference()
         {
-            return circumference(R);
+            return circumference(_radius);
         }
         private double circumference(double r)
         {
@@ -77,7 +79,7 @@ namespace task2_6
 
         public double GetSquare()
         {
-            return square(R);
+            return square(_radius);
         }
         private double square(double r)
         {
@@ -86,26 +88,24 @@ namespace task2_6
 
         public void GetInfo()
         {
-            Console.WriteLine($"\n\rRound Information:" 
+            Console.WriteLine($"\n\rRound Information:"
                 + $"\n\rX = {Center.X}"
                 + $"\n\rY = {Center.Y}"
-                + $"\n\rR = {R:F4}"
+                + $"\n\rR = {_radius:F4}"
                 + $"\n\rCircumference = {GetCircumference():F4}"
                 + $"\n\rSquare of Circle = {GetSquare():F4}");
         }
 
-        public Round(int x, int y, double r)
+        public Round(int x, int y)
         {
-            Center.X = x;
-            Center.Y = y;
-            R = r;
+            Center = new Point(x, y);
         }
-        public Round(Point center, double r)
+
+        public Round(Point center)
         {
             Center = center;
-            R = r;
         }
-    }  
+    }
 
     public class Ring
     {
@@ -127,15 +127,15 @@ namespace task2_6
             Console.WriteLine("\n\rRing Information: " 
                 + $"\n\rX = {Inner.Center.X}"
                 + $"\n\rY = {Inner.Center.Y}"
-                + $"\n\rInner R = {Inner.R:F4}"
-                + $"\n\rOuter R = {Outer.R:F4}"
+                + $"\n\rInner R = {Inner.Radius:F4}"
+                + $"\n\rOuter R = {Outer.Radius:F4}"
                 + $"\n\rSquare of Ring = {RingSquare():F4}"
                 + $"\n\rSum of Circumferences = {SumOfCircumferences():F4}");
         }
 
         public Ring (Round firstRound, Round secondRound)
         {
-            if (firstRound.GetRadius() < secondRound.GetRadius())
+            if (firstRound.Radius < secondRound.Radius)
             {
                 Inner = firstRound;
                 Outer = secondRound;

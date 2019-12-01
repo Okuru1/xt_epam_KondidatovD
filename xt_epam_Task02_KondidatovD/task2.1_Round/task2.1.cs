@@ -21,8 +21,8 @@ namespace task2_1
 
             Point p1 = new Point(x, y);
 
-            Round Circle = new Round(x, y, r);
-            Round Circle2 = new Round(p1, r);
+            Round Circle = new Round(x, y);
+            Round Circle2 = new Round(p1);
 
             Circle.GetInfo();
             Circle2.GetInfo();
@@ -31,25 +31,26 @@ namespace task2_1
 
     public class Round
     {
-        private Point Center;
-        private double R;
-
-        public int GetX()
+        public readonly Point Center;
+        private double _radius;
+        
+        public double Radius
         {
-            return Center.X;
-        }
-        public int GetY()
-        {
-            return Center.Y;
-        }
-        public double GetRadius()
-        {
-            return R;
+            get
+            {
+                return _radius;
+            }
+            set
+            {
+                if (value <= 0)
+                    throw new ArgumentException("Invalid Radius. Radius cannot be negative or zero.", "Radius");
+                _radius = value;
+            }
         }
 
         public double GetCircumference()
         {
-            return circumference(R);
+            return circumference(_radius);
         }
         private double circumference(double r)
         {
@@ -58,7 +59,7 @@ namespace task2_1
 
         public double GetSquare()
         {
-            return square(R);
+            return square(_radius);
         }
         private double square(double r)
         {
@@ -70,20 +71,19 @@ namespace task2_1
             Console.WriteLine($"\n\rRound Information:"
                 + $"\n\rX = {Center.X}"
                 + $"\n\rY = {Center.Y}"
-                + $"\n\rR = {R:F4}"
+                + $"\n\rR = {_radius:F4}"
                 + $"\n\rCircumference = {GetCircumference():F4}"
                 + $"\n\rSquare of Circle = {GetSquare():F4}");
         }
 
-        public Round(int x, int y, double r)
+        public Round(int x, int y)
         {
             Center = new Point(x, y);
-            R = r;
         }
-        public Round(Point center, double r)
+
+        public Round(Point center)
         {
             Center = center;
-            R = r;
         }
     }
     
